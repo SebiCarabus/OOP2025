@@ -8,9 +8,9 @@ void NumberList::Init()
 
 bool NumberList::Add(int x)
 {
+	if (this->count >= 10)
+		return false;
 	this->numbers[this->count++] = x;
-	if (this->count <= 10)
-		return true;
 	return false;
 }
 
