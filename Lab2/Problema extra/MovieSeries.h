@@ -3,7 +3,7 @@
 class MovieSeries
 {
 private:
-	Movie* m[16];
+	Movie** m;
 	int count;
 public:
 	MovieSeries();
