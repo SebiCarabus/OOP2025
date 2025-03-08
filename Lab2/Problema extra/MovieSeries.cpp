@@ -4,16 +4,18 @@
 using namespace std;
 MovieSeries::MovieSeries()
 {
+	this->m = new Movie * [16];
 	this->count = 0;
 }
 void MovieSeries::init()
 {
+	this->m = new Movie * [16];
 	this->count = 0;
 }
 void MovieSeries::add(Movie* a)
 {
 	if (this->count < 16)
-		this->m[this->count++] = a;
+		this->m[this->count++] = a;	
 }
 void MovieSeries::print()
 {
