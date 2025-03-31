@@ -92,6 +92,7 @@ Number::Number(const Number& x)///copy constructor
 }
 Number::Number(Number&& x) : nr(x.nr), lg(x.lg), base(x.base), nb(x.nb) ///move constructor
 {
+	delete[]x.nb;
 	x.nb = nullptr;
 }
 Number::~Number()///Destructor
